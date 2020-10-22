@@ -48,7 +48,7 @@ function nextSequence() {
     gamePattern.push(randomChosenColour);
 
     //animate the next colour
-    $("#" + randomChosenColour).fadeIn(100).fadeOut(100).fadeIn(100);
+    $("#" + randomChosenColour).fadeIn(300).fadeOut(300).fadeIn(300);
 
     //play sound
     playSound(randomChosenColour);
@@ -87,7 +87,7 @@ function animatePress(currentColor) {
     //add delay for time out
     setTimeout(function() {
         $("#" + currentColor).removeClass("pressed");
-    }, 100);
+    }, 500);
 }
 
 //check the answer
@@ -113,7 +113,7 @@ function checkAnswer(currentLevel) {
         $("body").addClass("game-over");
         setTimeout(function () {
             $("body").removeClass("game-over");
-        }, 200);
+        }, 300);
 
         //change the title
         $("#level-title").text("Game Over, Click Here to Restart");
